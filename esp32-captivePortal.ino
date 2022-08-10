@@ -7,10 +7,6 @@
 #include "SPIFFS.h"
 #include "FS.h"
 
-//#include "PinDefinitionsAndMore.h"
-//#include <Arduino.h>
-//#include <IRremote.hpp>
-
 #define RXp2 16
 #define TXp2 17
 
@@ -20,7 +16,7 @@ AsyncWebServer server(80);
 
 // Replace with your network credentials
 const char *ssid = "ESP32-Access-Point";
-const char *password = "No-Connections-4llowed!";
+const char *password = "Your-Password-Here";
 
 
 
