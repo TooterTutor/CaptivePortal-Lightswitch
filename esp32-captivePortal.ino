@@ -95,7 +95,7 @@ public:
     * @brief When a client connects, this request should send them the main page.
     * @param request Asynchronous request to process.
     */
-   void handleRequest(AsyncWebServerRequest* request)
+   void handleRequest(AsyncWebServerRequest* request);
 };
 
 CaptiveRequestHandler::CaptiveRequestHandler()
@@ -247,7 +247,7 @@ void setup()
    WiFi.mode(WIFI_AP);
    WiFi.softAP(ssid, password);
 
-   String wifi_ip_address = WiFi.softAPIP();
+   auto wifi_ip_address = WiFi.softAPIP();
 
    // Print Access Point IP address and then set up Async Webserver
    Serial.print("AP IP address: ");
