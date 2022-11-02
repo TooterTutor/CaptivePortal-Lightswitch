@@ -1,23 +1,12 @@
-fieldset,
-figure,
 p {
     margin: 0
 }
 
-.j-module .j-rss .rssFeedTitle,
 .j-module .j-website-title-content,
 .j-module h1,
 .j-module h2,
 .j-module h3,
 .j-module h4,
-.j-rss .j-module .rssFeedTitle,
-.j-rss .j-static-page .rssFeedTitle,
-.j-static-page .j-rss .rssFeedTitle,
-.j-static-page .j-website-title-content,
-.j-static-page h1,
-.j-static-page h2,
-.j-static-page h3,
-.j-static-page h4,
 .jtpl-navigation .j-nav-level-1 a:link,
 .jtpl-navigation .j-nav-level-1 a:visited {
     word-wrap: break-word
@@ -41,13 +30,10 @@ p {
 
 .j-module a:link img,
 .j-module a:visited img,
-.j-static-page a:link img,
-.j-static-page a:visited img,
 .jtpl-footer a:link img,
 .jtpl-footer a:visited img,
 a:link img,
-a:visited img,
-fieldset {
+a:visited img {
     border: 0
 }
 
@@ -62,7 +48,6 @@ fieldset {
 
 #jtpl-mobile-navigation__checkbox:checked+.jtpl-main .jtpl-mobile-navigation__label .jtpl-mobile-navigation__borders:after,
 #jtpl-mobile-navigation__checkbox:checked+.jtpl-main .jtpl-mobile-navigation__label .jtpl-mobile-navigation__borders:before {
-    -ms-transform-origin: center center;
     transform-origin: center center
 }
 
@@ -72,14 +57,8 @@ fieldset {
     display: table
 }
 
-fieldset {
-    padding: 0
-}
-
 html {
-    font-size: 62.5%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%
+    font-size: 62.5%
 }
 
 .jtpl-main {
@@ -88,116 +67,72 @@ html {
 }
 
 @media (max-width:767px) {
+
     .j-module .j-website-title-content,
-    .j-module h1,
-    .j-static-page .j-website-title-content,
-    .j-static-page h1 {
-        font-size: 30px!important
+    .j-module h1 {
+        font-size: 30px !important
     }
-    .j-module h2,
-    .j-static-page h2 {
-        font-size: 26px!important
+
+    .j-module h2 {
+        font-size: 26px !important
     }
-    .j-module .j-rss .rssFeedTitle,
-    .j-module h3,
-    .j-rss .j-module .rssFeedTitle,
-    .j-rss .j-static-page .rssFeedTitle,
-    .j-static-page .j-rss .rssFeedTitle,
-    .j-static-page h3 {
-        font-size: 22px!important
-    }
-    .j-module .cc-shop-product-desc h4,
-    .j-static-page .cc-shop-product-desc h4 {
-        font-size: 19px!important
+
+    .j-module h3 {
+        font-size: 22px !important
     }
 }
 
-.j-module .j-rss .rssFeedTitle,
 .j-module h1,
 .j-module h2,
 .j-module h3,
-.j-module h4,
-.j-rss .j-module .rssFeedTitle,
-.j-rss .j-static-page .rssFeedTitle,
-.j-static-page .j-rss .rssFeedTitle,
-.j-static-page h1,
-.j-static-page h2,
-.j-static-page h3,
-.j-static-page h4 {
+.j-module h4 {
     font-family: inherit;
     margin: 0;
     padding: .5em 0 .1em;
     box-sizing: border-box;
     font-weight: 400;
-    color: #001F3F
+    color: #001f3f
 }
 
-.j-module h1,
-.j-static-page h1 {
+.j-module h1 {
     font-size: 48px;
-    font-size: 4.8rem;
     line-height: 1.05
 }
 
-.j-module h2,
-.j-static-page h2 {
+.j-module h2 {
     font-size: 32px;
-    font-size: 3.2rem;
     line-height: 1.25
 }
 
-.j-module .j-rss .rssFeedTitle,
-.j-module h3,
-.j-rss .j-module .rssFeedTitle,
-.j-rss .j-static-page .rssFeedTitle,
-.j-static-page .j-rss .rssFeedTitle,
-.j-static-page h3 {
+.j-module h3 {
     font-size: 24px;
-    font-size: 2.4rem;
     line-height: 1.25
 }
 
 .j-module a:link,
 .j-module a:visited,
-.j-static-page a:link,
-.j-static-page a:visited,
 .jtpl-footer a:link,
 .jtpl-footer a:visited {
-    color: #001F3F
+    color: #001f3f
 }
 
 .j-module a:active,
 .j-module a:focus,
 .j-module a:hover,
-.j-static-page a:active,
-.j-static-page a:focus,
-.j-static-page a:hover,
 .jtpl-footer a:active,
 .jtpl-footer a:focus,
 .jtpl-footer a:hover {
     text-decoration: none
 }
 
-.blogreadmore,
-.cc-pagemode-overlay input[type=submit].submitUser,
 .comment,
-.commententry input[type=submit],
-.j-checkout__button,
 .j-comment input[type=submit],
-.j-downloadDocument .cc-m-download-link,
 .j-formnew input[type=submit],
-.j-googlemaps .cc-map-route-submit button,
-.j-product .cc-shop-addtocard,
-.j-rss br+a[target="_blank"],
-.j-shop-addtocard-response .j-shop-addtocard-response--backward,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward,
-.skiptoform a:link,
-.skiptoform a:visited {
+.j-rss br+a[target="_blank"] {
     border-radius: 0;
     box-sizing: border-box;
     transition: all .3s ease-in;
     font-size: 16px;
-    font-size: 1.6rem;
     line-height: 1.5;
     background-color: #999;
     border: 1px solid #999;
@@ -209,127 +144,48 @@ html {
     padding: .5em 1em;
     text-align: center;
     text-decoration: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none
 }
 
-.blogreadmore:link,
-.blogreadmore:visited,
-.cc-pagemode-overlay input[type=submit].submitUser:link,
-.cc-pagemode-overlay input[type=submit].submitUser:visited,
 .comment:link,
 .comment:visited,
-.commententry input[type=submit]:link,
-.commententry input[type=submit]:visited,
-.j-checkout__button:link,
-.j-checkout__button:visited,
 .j-comment input[type=submit]:link,
 .j-comment input[type=submit]:visited,
-.j-downloadDocument .cc-m-download-link:link,
-.j-downloadDocument .cc-m-download-link:visited,
 .j-formnew input[type=submit]:link,
 .j-formnew input[type=submit]:visited,
-.j-googlemaps .cc-map-route-submit button:link,
-.j-googlemaps .cc-map-route-submit button:visited,
-.j-product .cc-shop-addtocard:link,
-.j-product .cc-shop-addtocard:visited,
 .j-rss br+a[target="_blank"]:link,
-.j-rss br+a[target="_blank"]:visited,
-.j-shop-addtocard-response .j-shop-addtocard-response--backward:link,
-.j-shop-addtocard-response .j-shop-addtocard-response--backward:visited,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:link,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:visited,
-.skiptoform a:link,
-.skiptoform a:visited {
+.j-rss br+a[target="_blank"]:visited {
     color: #fff
 }
 
-.blogreadmore:active,
-.blogreadmore:focus,
-.blogreadmore:hover,
-.cc-pagemode-overlay input[type=submit].submitUser:active,
-.cc-pagemode-overlay input[type=submit].submitUser:focus,
-.cc-pagemode-overlay input[type=submit].submitUser:hover,
 .comment:active,
 .comment:focus,
 .comment:hover,
-.commententry input[type=submit]:active,
-.commententry input[type=submit]:focus,
-.commententry input[type=submit]:hover,
-.j-checkout__button:active,
-.j-checkout__button:focus,
-.j-checkout__button:hover,
 .j-comment input[type=submit]:active,
 .j-comment input[type=submit]:focus,
 .j-comment input[type=submit]:hover,
-.j-downloadDocument .cc-m-download-link:active,
-.j-downloadDocument .cc-m-download-link:focus,
-.j-downloadDocument .cc-m-download-link:hover,
 .j-formnew input[type=submit]:active,
 .j-formnew input[type=submit]:focus,
 .j-formnew input[type=submit]:hover,
-.j-googlemaps .cc-map-route-submit button:active,
-.j-googlemaps .cc-map-route-submit button:focus,
-.j-googlemaps .cc-map-route-submit button:hover,
-.j-product .cc-shop-addtocard:active,
-.j-product .cc-shop-addtocard:focus,
-.j-product .cc-shop-addtocard:hover,
 .j-rss br+a[target="_blank"]:active,
 .j-rss br+a[target="_blank"]:focus,
-.j-rss br+a[target="_blank"]:hover,
-.j-shop-addtocard-response .j-shop-addtocard-response--backward:active,
-.j-shop-addtocard-response .j-shop-addtocard-response--backward:focus,
-.j-shop-addtocard-response .j-shop-addtocard-response--backward:hover,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:active,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:focus,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:hover,
-.skiptoform a:active:link,
-.skiptoform a:active:visited,
-.skiptoform a:focus:link,
-.skiptoform a:focus:visited,
-.skiptoform a:hover:link,
-.skiptoform a:hover:visited {
+.j-rss br+a[target="_blank"]:hover {
     background-color: #555;
     border-color: #555;
     color: #fff;
     font-style: normal
 }
 
-.j-product .cc-shop-addtocard,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward {
-    background-color: #666;
-    border-color: #666
-}
-
-.j-product .cc-shop-addtocard:active,
-.j-product .cc-shop-addtocard:focus,
-.j-product .cc-shop-addtocard:hover,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:active,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:focus,
-.j-shop-addtocard-response .j-shop-addtocard-response--forward:hover {
-    background-color: #333;
-    border-color: #333;
-    color: #fff
-}
-
-.cc-pagemode-overlay #password,
-.commententry input[type=text],
-.commententry input[type=date],
-.commententry textarea,
-.j-checkout__input-field,
-.j-comment input[type=text],
 .j-comment input[type=date],
+.j-comment input[type=text],
 .j-comment textarea,
-.j-formnew .cc-m-form-view-sortable input[type=text],
 .j-formnew .cc-m-form-view-sortable input[type=date],
 .j-formnew .cc-m-form-view-sortable input[type=email],
-.j-formnew .cc-m-form-view-sortable textarea,
-.j-googlemaps .cc-map-route-start {
+.j-formnew .cc-m-form-view-sortable input[type=text],
+.j-formnew .cc-m-form-view-sortable textarea {
     box-sizing: border-box;
     transition: border-color .3s ease-in;
     font-size: 16px;
-    font-size: 1.6rem;
     line-height: 1.5;
     background-color: inherit;
     border: 1px solid #999;
@@ -338,45 +194,27 @@ html {
     padding: 5px
 }
 
-.cc-pagemode-overlay #password:active,
-.cc-pagemode-overlay #password:focus,
-.cc-pagemode-overlay #password:hover,
-.commententry input[type=text]:active,
-.commententry input[type=text]:focus,
-.commententry input[type=text]:hover,
-.commententry input[type=date]:active,
-.commententry input[type=date]:focus,
-.commententry input[type=date]:hover,
-.commententry textarea:active,
-.commententry textarea:focus,
-.commententry textarea:hover,
-.j-checkout__input-field:active,
-.j-checkout__input-field:focus,
-.j-checkout__input-field:hover,
-.j-comment input[type=text]:active,
-.j-comment input[type=text]:focus,
-.j-comment input[type=text]:hover,
 .j-comment input[type=date]:active,
 .j-comment input[type=date]:focus,
 .j-comment input[type=date]:hover,
+.j-comment input[type=text]:active,
+.j-comment input[type=text]:focus,
+.j-comment input[type=text]:hover,
 .j-comment textarea:active,
 .j-comment textarea:focus,
 .j-comment textarea:hover,
-.j-formnew .cc-m-form-view-sortable input[type=text]:active,
-.j-formnew .cc-m-form-view-sortable input[type=text]:focus,
-.j-formnew .cc-m-form-view-sortable input[type=text]:hover,
 .j-formnew .cc-m-form-view-sortable input[type=date]:active,
 .j-formnew .cc-m-form-view-sortable input[type=date]:focus,
 .j-formnew .cc-m-form-view-sortable input[type=date]:hover,
 .j-formnew .cc-m-form-view-sortable input[type=email]:active,
 .j-formnew .cc-m-form-view-sortable input[type=email]:focus,
 .j-formnew .cc-m-form-view-sortable input[type=email]:hover,
+.j-formnew .cc-m-form-view-sortable input[type=text]:active,
+.j-formnew .cc-m-form-view-sortable input[type=text]:focus,
+.j-formnew .cc-m-form-view-sortable input[type=text]:hover,
 .j-formnew .cc-m-form-view-sortable textarea:active,
 .j-formnew .cc-m-form-view-sortable textarea:focus,
-.j-formnew .cc-m-form-view-sortable textarea:hover,
-.j-googlemaps .cc-map-route-start:active,
-.j-googlemaps .cc-map-route-start:focus,
-.j-googlemaps .cc-map-route-start:hover {
+.j-formnew .cc-m-form-view-sortable textarea:hover {
     border-color: inherit;
     outline: 0
 }
@@ -395,7 +233,6 @@ html {
     padding: 0;
     transition: transform 150ms ease-in, visibility 150ms ease-in;
     transform: perspective(200px) rotate3d(1, 0, 0, -90deg) scaleY(0);
-    -ms-transform-origin: 0 0;
     transform-origin: 0 0;
     transform-style: preserve-3d
 }
@@ -421,7 +258,6 @@ html {
 .jtpl-breadcrumbs a:link,
 .jtpl-breadcrumbs a:visited {
     font-size: 12px;
-    font-size: 1.2rem;
     line-height: 1.5;
     text-decoration: none
 }
@@ -446,47 +282,6 @@ html {
 .jtpl-breadcrumbs a:visited:focus,
 .jtpl-breadcrumbs a:visited:hover {
     color: #555
-}
-
-.jtpl-cart {
-    z-index: 110;
-    width: 100%
-}
-
-.jtpl-cart .j-cart {
-    transition: top .3s ease-in, right .3s ease-in;
-    top: 0;
-    position: absolute;
-    line-height: 2.3em
-}
-
-@media (min-width:1170px) {
-    .jtpl-cart {
-        height: 0
-    }
-    .jtpl-cart .j-cart {
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        max-height: none;
-        width: auto
-    }
-}
-
-.jtpl-cart .j-cart-icon {
-    background-color: #000;
-    background-color: rgba(0, 0, 0, .2);
-    box-sizing: border-box;
-    height: 50px
-}
-
-@media (min-width:1170px) {
-    .jtpl-cart .j-cart-icon {
-        background-color: #333;
-        background-color: rgba(51, 51, 51, .85);
-        padding: .7em .9em;
-        height: auto
-    }
 }
 
 .jtpl-header__mobile-topbar {
@@ -522,35 +317,22 @@ html {
 }
 
 @media (max-width:1169px) {
-    .jtpl-cart .j-cart {
-        left: 0
-    }
-    .jtpl-cart .j-cart-icon {
-        float: left
-    }
-    .jtpl-cart .j-cart--hover-popup {
-        display: none!important
-    }
     .jtpl-header {
-        background-color: transparent!important
+        background-color: transparent !important
     }
+
     .jtpl-logo {
-        float: none!important;
-        margin: 0 auto!important;
+        float: none !important;
+        margin: 0 auto !important;
         padding: 20px 15px 10px;
         width: 100%
     }
 }
 
-.datetime,
-.number {
-    float: right
-}
-
 @media (max-width:1169px) and (max-width:1169px) {
     .jtpl-logo img {
-        max-height: 120px!important;
-        width: auto!important
+        max-height: 120px !important;
+        width: auto !important
     }
 }
 
@@ -574,6 +356,7 @@ html {
     .jtpl-header__mobile-topbar {
         display: none
     }
+
     .jtpl-main {
         overflow: auto
     }
@@ -642,18 +425,15 @@ html {
 }
 
 #jtpl-mobile-navigation__checkbox:checked+.jtpl-main .jtpl-mobile-navigation__label .jtpl-mobile-navigation__borders:before {
-    -ms-transform: rotate(45deg) scaleX(1.1517511069);
     transform: rotate(45deg) scaleX(1.1517511069)
 }
 
 #jtpl-mobile-navigation__checkbox:checked+.jtpl-main .jtpl-mobile-navigation__label .jtpl-mobile-navigation__borders:after {
-    -ms-transform: rotate(-45deg) scaleX(1.1517511069);
     transform: rotate(-45deg) scaleX(1.1517511069)
 }
 
 #jtpl-mobile-navigation__checkbox:checked+.jtpl-main .jtpl-mobile-navigation__fallback {
     visibility: visible;
-    -ms-transform: translateX(0);
     transform: translateX(0);
     opacity: 1
 }
@@ -683,14 +463,13 @@ html {
     visibility: hidden;
     width: 80%;
     overflow: hidden;
-    -ms-transform: translateX(80%);
     transform: translateX(80%);
-    -ms-transform-origin: right;
     transform-origin: right;
     transition: all .3s ease-in
 }
 
 @media (min-width:1170px) {
+
     .jtpl-mobile-navigation__fallback,
     .jtpl-mobile-navigation__label {
         display: none
@@ -724,20 +503,16 @@ html {
 .jtpl-mobile-navigation .jmd-nav__toggle-button {
     box-sizing: border-box;
     width: 40px;
-    width: 4rem;
     height: 40px;
-    height: 4rem;
     position: absolute;
     outline: 0;
     cursor: pointer;
     border: none;
     background-color: rgba(0, 0, 0, .125);
-    -webkit-tap-highlight-color: transparent;
     text-align: center;
     display: block;
     border-radius: 30px;
     top: 9px;
-    top: .9rem;
     right: 12px
 }
 
@@ -748,12 +523,10 @@ html {
 }
 
 .jtpl-mobile-navigation .jmd-nav__toggle-button:before {
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg)
 }
 
 .jtpl-mobile-navigation .jmd-nav__toggle-button:after {
-    -ms-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
@@ -763,21 +536,11 @@ html {
     position: absolute;
     border-radius: .1rem;
     width: 16px;
-    width: 1.6rem;
     height: 2px;
-    height: .2rem;
     left: 12px;
-    left: 1.2rem;
     top: 19px;
-    top: 1.9rem;
     background-color: #fff;
     transition: all .3s ease-in-out
-}
-
-.jtpl-mobile-navigation .jmd-nav__item--last-opened>.jmd-nav__toggle-button:after,
-.jtpl-mobile-navigation .jmd-nav__item--last-opened>.jmd-nav__toggle-button:before {
-    -ms-transform: rotate(0);
-    transform: rotate(0)
 }
 
 .jtpl-mobile-navigation ul {
@@ -804,8 +567,8 @@ html {
     text-align: left;
     word-wrap: break-word;
     transition: border-color .3s ease-in, color .3s ease-in, background-color .3s ease-in;
-    font-size: 18px!important;
-    line-height: 1.5!important
+    font-size: 18px !important;
+    line-height: 1.5 !important
 }
 
 .jtpl-mobile-navigation .j-nav-current>a:link,
@@ -836,15 +599,6 @@ html {
 .jtpl-mobile-navigation .j-nav-level-2 a:link,
 .jtpl-mobile-navigation .j-nav-level-2 a:visited {
     padding-left: 45px
-}
-
-.jtpl-mobile-navigation .j-nav-has-children>ul {
-    position: relative;
-    display: none
-}
-
-.jtpl-mobile-navigation .jmd-nav__item--last-opened>ul {
-    display: block
 }
 
 .jtpl-navigation {
@@ -885,9 +639,8 @@ html {
     background-color: #666;
     text-align: left;
     font-size: 12px;
-    font-size: 1.2rem;
     line-height: 1.5;
-    color: #001F3F;
+    color: #001f3f;
     text-decoration: none;
     text-transform: uppercase;
     transition: color .3s ease-in, background-color .3s ease-in, border-color .3s ease-in
@@ -964,11 +717,9 @@ html {
     }
 }
 
-.j-rss .jtpl-section-aside .rssFeedTitle,
 .jtpl-footer,
 .jtpl-footer a:link,
 .jtpl-footer a:visited,
-.jtpl-section-aside .j-rss .rssFeedTitle,
 .jtpl-section-aside a,
 .jtpl-section-aside h1,
 .jtpl-section-aside h2,
@@ -1017,7 +768,7 @@ html {
     .j-website-title-content {
         margin: 10px auto;
         font-size: 30px;
-        text-align: center!important
+        text-align: center !important
     }
 }
 
@@ -1029,12 +780,6 @@ html {
     display: block
 }
 
-#cc-checkout-steps li:last-child span:after,
-.j-blog-meta:after,
-.j-blog-meta:before {
-    content: ""
-}
-
 .j-website-title-content:not(:empty):before {
     background: url(header-line.png) left bottom repeat-x
 }
@@ -1043,64 +788,13 @@ html {
     background: url(header-line.png) left top repeat-x
 }
 
-.j-blog-meta:after,
-.j-blog-meta:before {
-    clear: both;
-    display: table
-}
-
-.postmeta {
-    margin: .5em 0
-}
-
-.j-blogarticle a:link,
-.j-blogarticle a:visited {
-    text-decoration: none;
-    color: #fff
-}
-
-.j-blogarticle a:active,
-.j-blogarticle a:focus,
-.j-blogarticle a:hover {
-    color: #fff
-}
-
-.j-blogarticle a:active h2 a:link,
-.j-blogarticle a:active h2 a:visited,
-.j-blogarticle a:focus h2 a:link,
-.j-blogarticle a:focus h2 a:visited,
-.j-blogarticle a:hover h2 a:link,
-.j-blogarticle a:hover h2 a:visited {
-    text-decoration: none;
-    color: #fff
-}
-
-.j-blogarticle a:active h2 a:active,
-.j-blogarticle a:active h2 a:focus,
-.j-blogarticle a:active h2 a:hover,
-.j-blogarticle a:focus h2 a:active,
-.j-blogarticle a:focus h2 a:focus,
-.j-blogarticle a:focus h2 a:hover,
-.j-blogarticle a:hover h2 a:active,
-.j-blogarticle a:hover h2 a:focus,
-.j-blogarticle a:hover h2 a:hover {
-    color: #555
-}
-
-.blogreadmore,
 .comment {
     margin-right: 1em
-}
-
-.datetime {
-    margin: .5em 0
 }
 
 .j-callToAction .j-calltoaction-link-style-1,
 .j-callToAction .j-calltoaction-link-style-2,
 .j-callToAction .j-calltoaction-link-style-3 {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     border-radius: 0;
     box-sizing: border-box;
@@ -1116,7 +810,6 @@ html {
 
 .j-callToAction .j-calltoaction-link-style-1 {
     font-size: 24px;
-    font-size: 2.4rem;
     line-height: 1.25;
     background-color: #999;
     border: 1px solid #999;
@@ -1142,7 +835,6 @@ html {
     transition-delay: .2s;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
     font-size: 16px;
-    font-size: 1.6rem;
     line-height: 1.5;
     background-color: #999;
     border: 1px solid #999;
@@ -1169,7 +861,6 @@ html {
 
 .j-callToAction .j-calltoaction-link-style-3 {
     font-size: 16px;
-    font-size: 1.6rem;
     line-height: 1.5;
     background-color: transparent;
     border: 2px solid #999;
@@ -1195,41 +886,12 @@ html {
     padding: 0
 }
 
-.j-comment dd {
-    margin: 0
-}
-
 .j-comment h2 {
     margin-bottom: .5em
 }
 
-.com-list-noava li {
-    margin-bottom: 1.5em
-}
-
-.com-meta,
-.commententry {
+.com-meta {
     margin: 0 60px 0 0
-}
-
-.com-meta dd,
-.commententry dd {
-    margin: 0
-}
-
-.commententry {
-    margin-bottom: 1.5em
-}
-
-.commententry input[type=text],
-.commententry input[type=date] {
-    width: 50%
-}
-
-.commententry label {
-    display: inline-block;
-    padding: 10px 0 5px;
-    box-sizing: border-box
 }
 
 hr {
@@ -1241,441 +903,63 @@ hr {
     border-bottom-color: #ddd
 }
 
-.j-product .cc-shop-product-desc h4 {
-    font-size: 32px;
-    font-size: 3.2rem;
-    line-height: 1.25
-}
-
-.j-product .cc-shop-product-price-old {
-    font-size: 24px;
-    font-size: 2.4rem;
-    line-height: 1.25
-}
-
-.j-product .cc-shop-product-price-current {
-    font-size: 32px;
-    font-size: 3.2rem;
-    line-height: 1.25
-}
-
-.j-product {
-    padding: 20px 0;
-    border-bottom: 1px dashed #ccc;
-    box-sizing: border-box
-}
-
 .j-rss {
     line-height: 1.5
-}
-
-.j-rss .rssFeedTitle {
-    display: block;
-    margin: 1em 0 .5em
-}
-
-.jtpl-content #cc-checkout-wrapper,
-.jtpl-content .cc-checkout-overview .cc-checkout-fullshopingcart-wrapper,
-.jtpl-content .cc-checkout-products th {
-    background: 0 0
-}
-
-#cc-checkout-steps {
-    display: block;
-    box-sizing: border-box;
-    font-size: 12px;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin: 0 0 1.5rem;
-    padding: .5rem 0
-}
-
-#cc-checkout-steps li {
-    display: inline-block;
-    width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    opacity: .5;
-    border: 1px solid #222;
-    padding: .8rem 1.5rem;
-    margin-bottom: 1rem;
-    background: #fff;
-    text-align: center
-}
-
-@media (min-width:1170px) {
-    #cc-checkout-steps {
-        display: -ms-flexbox!important;
-        display: flex!important;
-        -ms-flex-pack: justify;
-        justify-content: space-between
-    }
-    #cc-checkout-steps li {
-        width: 24%;
-        margin-right: 10px
-    }
-    #cc-checkout-steps li:last-child {
-        margin-right: 0
-    }
-}
-
-#cc-checkout-steps li span {
-    color: #222;
-    display: inline-block;
-    line-height: 1.5;
-    text-decoration: none
-}
-
-#cc-checkout-steps li span:after {
-    content: "\00bb";
-    display: inline-block;
-    padding: 0 1rem
-}
-
-#cc-checkout-steps .cc-checkout-steps-ready {
-    cursor: default;
-    opacity: .5
-}
-
-#cc-checkout-steps .cc-checkout-steps-current {
-    opacity: 1;
-    border-color: #222;
-    border-color: rgba(34, 34, 34, .85);
-    background-color: #222;
-    background-color: rgba(34, 34, 34, .85)
-}
-
-#cc-checkout-steps .cc-checkout-steps-current span {
-    color: #fff
-}
-
-.j-checkout__overview-change-link {
-    color: #001F3F
-}
-
-.j-checkout__button {
-    padding: 4px 18px!important
-}
-
-.j-checkout__shipping-address .j-checkout__heading {
-    padding-bottom: 0
-}
-
-@media (min-width:768px) {
-    .j-checkout__shipping-address .j-checkout__heading {
-        padding-bottom: 50px
-    }
-}
-
-.j-checkout__payment-info {
-    background: 0 0
 }
 
 .navigation-colors a,
 .navigation-colors a:link,
 .navigation-colors a:visited {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
-.navigation-vertical-alignment a,
-.navigation-vertical-alignment a:link,
-.navigation-vertical-alignment a:visited {}
-
 .content-options h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
 .content-options h2:not(.j-blog-headline):not(.j-blog-comment-counter) {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
-.content-options h3,
 .content-options .j-rss h3 a:link,
-.content-options .j-rss h3 a:visited {
-    font-weight: normal;
+.content-options .j-rss h3 a:visited,
+.content-options h3 {
+    font-weight: 400;
     font-style: normal
-}
-
-.content-options #cc-checkout-gutter a:link,
-.content-options #cc-shop-deliveryinfopage a:link,
-.content-options #cc-shop-infopage a:link,
-.content-options .cc-privacy a:link,
-.content-options .cc-shop-product-desc a:link,
-.content-options .cc-tos a:link,
-.content-options .cc-withdrawal a:link,
-.content-options .com-list a:link,
-.content-options .com-list-noava a:link,
-.content-options .sitemap a:link,
-.content-options .cc-m-form-submit a:link,
-.content-options .j-cookie-policy a:link,
-.content-options .j-cookie-settings a:link,
-.content-options .j-catalog-product-description a:link,
-.content-options .j-htmlcode a:link,
-.content-options .j-table a:link,
-.content-options .j-text a:link,
-.content-options .j-textWithImage a:link,
-.content-options .j-twitter a:link,
-.content-options .j-blog-content .j-catalog-product-description a:link,
-.content-options .j-blog-content .j-htmlcode a:link,
-.content-options .j-blog-content .j-table a:link,
-.content-options .j-blog-content .j-text a:link,
-.content-options .j-blog-content .j-textWithImage a:link,
-.content-options .j-blog-content .j-twitter a:link,
-.content-options #cc-checkout-gutter a:visited,
-.content-options #cc-shop-deliveryinfopage a:visited,
-.content-options #cc-shop-infopage a:visited,
-.content-options .cc-privacy a:visited,
-.content-options .cc-shop-product-desc a:visited,
-.content-options .cc-tos a:visited,
-.content-options .cc-withdrawal a:visited,
-.content-options .com-list a:visited,
-.content-options .com-list-noava a:visited,
-.content-options .sitemap a:visited,
-.content-options .cc-m-form-submit a:visited,
-.content-options .j-cookie-policy a:visited,
-.content-options .j-cookie-settings a:visited,
-.content-options .j-catalog-product-description a:visited,
-.content-options .j-htmlcode a:visited,
-.content-options .j-table a:visited,
-.content-options .j-text a:visited,
-.content-options .j-textWithImage a:visited,
-.content-options .j-twitter a:visited,
-.content-options .j-blog-content .j-catalog-product-description a:visited,
-.content-options .j-blog-content .j-htmlcode a:visited,
-.content-options .j-blog-content .j-table a:visited,
-.content-options .j-blog-content .j-text a:visited,
-.content-options .j-blog-content .j-textWithImage a:visited,
-.content-options .j-blog-content .j-twitter a:visited {}
-
-.content-options input[type="submit"],
-.content-options .j-formnew input[type="submit"],
-.content-options .j-blogarticle .blogreadmore:link,
-.content-options .j-blogarticle .blogreadmore:visited,
-.content-options .j-blog .skiptoform a,
-.content-options .j-blogarticle .comment,
-.content-options .post .blogreadmore:link,
-.content-options .post .blogreadmore:visited,
-.content-options .post .comment,
-.content-options .j-downloadDocument .cc-m-download-link,
-.content-options .j-newsletterbox input[type="submit"],
-.content-options .j-comment input[type="submit"],
-.content-options .j-comment .skiptoform a,
-.content-options .commententry input[type="submit"],
-.content-options .cc-checkout-btn[type="submit"],
-.content-options .j-rss br+a[target="_blank"],
-.content-options .j-googlemaps .cc-map-route-submit button,
-.content-options .j-checkout__button {}
-
-.content-options .j-comment textarea,
-.content-options .j-comment input[type="text"],
-.content-options .j-comment input[type="date"],
-.content-options .commententry textarea,
-.content-options .commententry input[type="text"],
-.content-options .commententry input[type="date"],
-.content-options .j-formnew .cc-m-form-view-sortable input[type="text"],
-.content-options .j-formnew .cc-m-form-view-sortable input[type="date"],
-.content-options .j-formnew .cc-m-form-view-sortable input[type="email"],
-.content-options .j-formnew .cc-m-form-view-sortable textarea,
-.content-options .j-formnew .cc-m-form-view-sortable select,
-.content-options .j-newsletterbox input[type="email"],
-.content-options #cc-checkout-gutter input[type="text"],
-.content-options #cc-checkout-gutter input[type="date"],
-.content-options #cc-checkout-gutter input[type="email"],
-.content-options #cc-checkout-gutter textarea,
-.content-options #cc-checkout-gutter select,
-.content-options .j-googlemaps .cc-map-route-start,
-.content-options .j-checkout__input-field {}
-
-.content-options .j-calltoaction-link-style-1:link,
-.content-options .j-calltoaction-link-style-1:visited {}
-
-.content-options .j-calltoaction-link-style-2:link,
-.content-options .j-calltoaction-link-style-2:visited {}
-
-.content-options .j-calltoaction-link-style-3:link,
-.content-options .j-calltoaction-link-style-3:visited {}
-
-.content-options .j-imageSubtitle figcaption,
-.content-options .j-textWithImage figcaption {
-    font-weight: normal
 }
 
 .cc-pagemode-overlay h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
-.cc-pagemode-overlay input[type="submit"].submitUser {}
-
-.cc-pagemode-overlay #password {}
-
 .sidebar-options h1:not(.cc-within-single-module-element):not(.j-blog-headline) {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
 .sidebar-options h2:not(.j-blog-headline):not(.j-blog-comment-counter) {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
-.sidebar-options h3,
 .sidebar-options .j-rss h3 a:link,
-.sidebar-options .j-rss h3 a:visited {
-    font-weight: normal;
+.sidebar-options .j-rss h3 a:visited,
+.sidebar-options h3 {
+    font-weight: 400;
     font-style: normal
 }
-
-.sidebar-options #cc-checkout-gutter a:link,
-.sidebar-options #cc-shop-deliveryinfopage a:link,
-.sidebar-options #cc-shop-infopage a:link,
-.sidebar-options .cc-privacy a:link,
-.sidebar-options .cc-shop-product-desc a:link,
-.sidebar-options .cc-tos a:link,
-.sidebar-options .cc-withdrawal a:link,
-.sidebar-options .com-list a:link,
-.sidebar-options .com-list-noava a:link,
-.sidebar-options .sitemap a:link,
-.sidebar-options .cc-m-form-submit a:link,
-.sidebar-options .j-cookie-policy a:link,
-.sidebar-options .j-cookie-settings a:link,
-.sidebar-options .j-catalog-product-description a:link,
-.sidebar-options .j-htmlcode a:link,
-.sidebar-options .j-table a:link,
-.sidebar-options .j-text a:link,
-.sidebar-options .j-textWithImage a:link,
-.sidebar-options .j-twitter a:link,
-.sidebar-options .j-blog-content .j-catalog-product-description a:link,
-.sidebar-options .j-blog-content .j-htmlcode a:link,
-.sidebar-options .j-blog-content .j-table a:link,
-.sidebar-options .j-blog-content .j-text a:link,
-.sidebar-options .j-blog-content .j-textWithImage a:link,
-.sidebar-options .j-blog-content .j-twitter a:link,
-.sidebar-options #cc-checkout-gutter a:visited,
-.sidebar-options #cc-shop-deliveryinfopage a:visited,
-.sidebar-options #cc-shop-infopage a:visited,
-.sidebar-options .cc-privacy a:visited,
-.sidebar-options .cc-shop-product-desc a:visited,
-.sidebar-options .cc-tos a:visited,
-.sidebar-options .cc-withdrawal a:visited,
-.sidebar-options .com-list a:visited,
-.sidebar-options .com-list-noava a:visited,
-.sidebar-options .sitemap a:visited,
-.sidebar-options .cc-m-form-submit a:visited,
-.sidebar-options .j-cookie-policy a:visited,
-.sidebar-options .j-cookie-settings a:visited,
-.sidebar-options .j-catalog-product-description a:visited,
-.sidebar-options .j-htmlcode a:visited,
-.sidebar-options .j-table a:visited,
-.sidebar-options .j-text a:visited,
-.sidebar-options .j-textWithImage a:visited,
-.sidebar-options .j-twitter a:visited,
-.sidebar-options .j-blog-content .j-catalog-product-description a:visited,
-.sidebar-options .j-blog-content .j-htmlcode a:visited,
-.sidebar-options .j-blog-content .j-table a:visited,
-.sidebar-options .j-blog-content .j-text a:visited,
-.sidebar-options .j-blog-content .j-textWithImage a:visited,
-.sidebar-options .j-blog-content .j-twitter a:visited {}
-
-.sidebar-options input[type="submit"],
-.sidebar-options .j-formnew input[type="submit"],
-.sidebar-options .j-blogarticle .blogreadmore:link,
-.sidebar-options .j-blogarticle .blogreadmore:visited,
-.sidebar-options .j-blog .skiptoform a,
-.sidebar-options .j-blogarticle .comment,
-.sidebar-options .post .blogreadmore:link,
-.sidebar-options .post .blogreadmore:visited,
-.sidebar-options .post .comment,
-.sidebar-options .j-downloadDocument .cc-m-download-link,
-.sidebar-options .j-newsletterbox input[type="submit"],
-.sidebar-options .j-comment input[type="submit"],
-.sidebar-options .j-comment .skiptoform a,
-.sidebar-options .commententry input[type="submit"],
-.sidebar-options .cc-checkout-btn[type="submit"],
-.sidebar-options .j-rss br+a[target="_blank"],
-.sidebar-options .j-googlemaps .cc-map-route-submit button,
-.sidebar-options .j-checkout__button {}
-
-.sidebar-options .j-comment textarea,
-.sidebar-options .j-comment input[type="text"],
-.sidebar-options .j-comment input[type="date"],
-.sidebar-options .commententry textarea,
-.sidebar-options .commententry input[type="text"],
-.sidebar-options .commententry input[type="date"],
-.sidebar-options .j-formnew .cc-m-form-view-sortable input[type="text"],
-.sidebar-options .j-formnew .cc-m-form-view-sortable input[type="date"],
-.sidebar-options .j-formnew .cc-m-form-view-sortable input[type="email"],
-.sidebar-options .j-formnew .cc-m-form-view-sortable textarea,
-.sidebar-options .j-formnew .cc-m-form-view-sortable select,
-.sidebar-options .j-newsletterbox input[type="email"],
-.sidebar-options #cc-checkout-gutter input[type="text"],
-.sidebar-options #cc-checkout-gutter input[type="date"],
-.sidebar-options #cc-checkout-gutter input[type="email"],
-.sidebar-options #cc-checkout-gutter textarea,
-.sidebar-options #cc-checkout-gutter select,
-.sidebar-options .j-googlemaps .cc-map-route-start,
-.sidebar-options .j-checkout__input-field {}
-
-.sidebar-options .j-calltoaction-link-style-1:link,
-.sidebar-options .j-calltoaction-link-style-1:visited {}
-
-.sidebar-options .j-calltoaction-link-style-2:link,
-.sidebar-options .j-calltoaction-link-style-2:visited {}
-
-.sidebar-options .j-calltoaction-link-style-3:link,
-.sidebar-options .j-calltoaction-link-style-3:visited {}
-
-.sidebar-options .j-imageSubtitle figcaption,
-.sidebar-options .j-textWithImage figcaption {
-    font-weight: normal
-}
-
-.footer-options a:link,
-.footer-options a:visited,
-.footer-options .leftrow,
-.footer-options .rightrow {}
 
 .breadcrumb-options a:link,
 .breadcrumb-options a:visited {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
 
 .j-website-title-content {
-    font-weight: normal;
-    font-style: normal
-}
-
-.j-product .cc-shop-product-desc h4 {
-    font-weight: normal;
-    font-style: normal
-}
-
-.j-product .cc-shop-product-desc .cc-shop-addtocard,
-.j-product .cc-shop-product-desc input.cc-checkout-btn {}
-
-.cc-product-details .cc-product-title a {
-    font-weight: normal;
-    font-style: normal
-}
-
-body .j-shop-addtocard-response a.j-shop-addtocard-response--backward:link,
-body .j-shop-addtocard-response a.j-shop-addtocard-response--backward:visited {
-    opacity: 0.7
-}
-
-.j-blog .j-blog-meta .j-blog-headline,
-.j-blogSelection .j-blog-headline {
-    font-weight: normal;
-    font-style: normal
-}
-
-.datetime {}
-
-.j-rss .j-rss-feed-title {
-    font-weight: normal;
+    font-weight: 400;
     font-style: normal
 }
