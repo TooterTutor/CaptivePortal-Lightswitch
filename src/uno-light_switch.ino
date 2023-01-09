@@ -14,12 +14,11 @@
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
 #include <SoftwareSerial.h>
-//#include <IRremote.hpp>
+#include <IRremote.h>
 #include <pitches.h>
 
 
-LiquidCrystal_I2C lcd(0x27, 16, 2);  // Set the LCD I2C address
-//IRsend IR_SEND_PIN;
+LiquidCrystal_I2C lcd(0x27, 2, 1, 0, 4, 5, 6, 7, 3, POSITIVE);  // Set the LCD I2C address
 
 
 /***************Addons***************/
@@ -27,6 +26,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);  // Set the LCD I2C address
 #define Buzz_Pin       13       // Active Buzzer pin connect to pin 13
 #define trigPin        4        // Trigger Pin UDR Module connect to pin 4
 #define echoPin        5        // Echo Pin UDR Module connect to pin 3
+#define IR_SEND_PIN    3
 
 
 int duration = 500;  // 500 miliseconds
@@ -339,52 +339,6 @@ void do_Sensor_Tick()
   }
 }
 
-
-/**************Detect IR Code***************/
-//void do_IR_Tick()
-//{
-//  if (!IR.decode(&IRresults))
-//  {
-//    return;
-//  }
-//  if (remote_lock)
-//  {
-//    return;
-//  }
-//  switch (IRresults.value)
-//  {
-//    case IR_TURN_ON:
-//    {
-//      Tick_Num = SWITCH_ON;
-//      switch_state = true;
-//      break;
-//    }
-//    case IR_TURN_OFF:
-//    {
-//      Tick_Num = SWITCH_OFF;
-//      switch_state = false;
-//      break;
-//    }
-//    case IR_UNLOCK:
-//    {
-//      Tick_Num = SWITCH_RESET;
-//      flag_lock = false;
-//      break;
-//    }
-//    case IR_LOCK:
-//    {
-//      Tick_Num = SWITCH_LOCK;
-//      flag_lock = true;
-//      break;
-//    }
-//    default:
-//      break;
-//  }
-//
-//  IRresults.value = 0;
-//  IR.resume();
-//}
-
 void do_Switch_Tick()
 {
   switch (Tick_Num)
@@ -434,15 +388,8 @@ void setup()
   Serial.begin(9600);
   espSerial.begin(9600);
   
-  // Still a work in progress!
   // Define Infrared Send Pins:
-
-//  #if defined(IR_SEND_PIN)
-//    IrSender.begin(); // Start with IR_SEND_PIN as send pin and enable feedback LED at default feedback LED pin
-//#else
-//    IrSender.begin(3, ENABLE_LED_FEEDBACK); // Specify send pin and enable feedback LED at default feedback LED pin
-//#endif
-  
+  IrSender.begin(IR_SEND_PIN, ENABLE_LED_FEEDBACK); // Specify send pin and enable feedback LED at default feedback LED pin
 
   // Custom LCD Characters
   lcd.createChar(0, lockchar);
@@ -557,113 +504,66 @@ void send_Command()
     StompGoblin_whistle();
     Serial.println("Successfully Whistled for StompGoblin");
   }
-  // Still a work in progress!
-  
-//  else if (inputString.equalsIgnoreCase("stereo_power"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_cd"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_mute"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_aux"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_bt"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_fm"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_rr"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_play"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_ff"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_rpt"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_stop"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_prog"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_voldown"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_bass"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
-//  else if (inputString.equalsIgnoreCase("stereo_volup"))
-//  {
-//    uint16_t sAddress = 0x0;
-//    uint8_t sCommand = 0xD;
-//    uint8_t sRepeats = 0;
-//    IrSender.sendNEC(sAddress, sCommand, sRepeats);
-//  }
+  else if (inputString.equalsIgnoreCase("stereo_power"))
+  {
+    IrSender.sendNEC(0x0, 0xD, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_cd"))
+  {
+    IrSender.sendNEC(0x0, 0xE, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_mute"))
+  {
+    IrSender.sendNEC(0x0, 0xF, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_aux"))
+  {
+    IrSender.sendNEC(0x0, 0xB, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_bt"))
+  {
+    IrSender.sendNEC(0x0, 0x9, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_fm"))
+  {
+    IrSender.sendNEC(0x0, 0xA, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_rr"))
+  {
+    IrSender.sendNEC(0x0, 0x11, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_play"))
+  {
+    IrSender.sendNEC(0x0, 0x12, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_ff"))
+  {
+    IrSender.sendNEC(0x0, 0x13, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_rpt"))
+  {
+    IrSender.sendNEC(0x0, 0x15, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_stop"))
+  {
+    IrSender.sendNEC(0x0, 0x16, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_prog"))
+  {
+    IrSender.sendNEC(0x0, 0x17, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_voldown"))
+  {
+    IrSender.sendNEC(0x0, 0x19, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_bass"))
+  {
+    IrSender.sendNEC(0x0, 0x1A, 0);
+  }
+  else if (inputString.equalsIgnoreCase("stereo_volup"))
+  {
+    IrSender.sendNEC(0x0, 0x1B, 0);
+  }
 
 // Now that we've used the string, clear it so we can start fresh again.
   inputString = "";
